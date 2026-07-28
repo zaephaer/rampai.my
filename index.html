@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rampai.my — Projects Built with AI</title>
+  <meta name="description" content="rampai.my — a showcase of real projects created using AI. Browse, explore, and get inspired." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Set theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rampai-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" title="rampai = medley (Malay) + ramp + AI">
+        <span class="brand-mark">R</span>
+        <span class="brand-name">ramp<span class="brand-ai">ai</span><span class="brand-dot">.</span>my</span>
+      </a>
+      <nav class="nav">
+        <a href="#gallery" data-i18n="nav_projects">Projects</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#submit" class="btn btn-ghost" data-i18n="nav_submit">Submit a project</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </button>
+        <div class="lang-switch" id="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn is-active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ms">BM</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-blobs" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+    </div>
+    <div class="container hero-inner">
+      <span class="pill" data-i18n="hero_pill">✨ A showcase of what's possible with AI</span>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Projects built with</span>
+        <span class="gradient-text" data-i18n="hero_title_2">Artificial Intelligence</span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="ta-highlight">ramp + AI</span>
+        <span class="ta-dot">·</span>
+        <span data-i18n="hero_tagline">a medley of what Malaysians build</span>
+      </p>
+      <p class="hero-sub" data-i18n="hero_sub">
+        rampai.my is where creators showcase real projects made using AI tools.
+        Explore the gallery, click any card, and see what was built — and how.
+      </p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn btn-primary" data-i18n="hero_cta1">Explore projects</a>
+        <a href="#submit" class="btn btn-outline" data-i18n="hero_cta2">Showcase yours</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong data-count="6" data-suffix="+">6+</strong><span data-i18n="stat_projects">Projects</span></div>
+        <div class="stat"><strong data-count="5">5</strong><span data-i18n="stat_platforms">AI platforms</span></div>
+        <div class="stat"><strong data-count="100" data-suffix="%">100%</strong><span data-i18n="stat_made">Made in Malaysia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Platform marquee ===== -->
+  <div class="marquee-wrap">
+    <p class="marquee-label" data-i18n="marquee_label">Built with the AI tools you know</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="mq-item">Claude</span>
+        <span class="mq-item">ChatGPT</span>
+        <span class="mq-item">Midjourney</span>
+        <span class="mq-item">Gemini</span>
+        <span class="mq-item">Suno</span>
+        <span class="mq-item">DALL·E</span>
+        <span class="mq-item">Runway</span>
+        <span class="mq-item">Stable Diffusion</span>
+        <!-- duplicate set for a seamless loop -->
+        <span class="mq-item">Claude</span>
+        <span class="mq-item">ChatGPT</span>
+        <span class="mq-item">Midjourney</span>
+        <span class="mq-item">Gemini</span>
+        <span class="mq-item">Suno</span>
+        <span class="mq-item">DALL·E</span>
+        <span class="mq-item">Runway</span>
+        <span class="mq-item">Stable Diffusion</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Gallery ===== -->
+  <main id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 data-i18n="gallery_title">The Gallery</h2>
+        <p data-i18n="gallery_sub">Browse projects by the AI platform used to create them.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filters" id="filters">
+        <button class="filter is-active" data-filter="all" data-i18n="filter_all">All</button>
+        <button class="filter" data-filter="claude">Claude</button>
+        <button class="filter" data-filter="chatgpt">ChatGPT</button>
+        <button class="filter" data-filter="midjourney">Midjourney</button>
+        <button class="filter" data-filter="gemini">Gemini</button>
+        <button class="filter" data-filter="suno">Suno</button>
+      </div>
+
+      <!-- Project grid -->
+      <div class="grid" id="project-grid">
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="claude" style="--c1:#6366f1; --c2:#a855f7;">
+          <div class="thumb"><span class="thumb-icon">📊</span></div>
+          <div class="card-body">
+            <span class="badge">Claude</span>
+            <h3 class="card-title">Kedai Runcit Analytics</h3>
+            <p class="card-desc" data-i18n="proj1_desc">A sales dashboard for neighbourhood shops, with forecasting and stock alerts.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="chatgpt" style="--c1:#10b981; --c2:#3b82f6;">
+          <div class="thumb"><span class="thumb-icon">📖</span></div>
+          <div class="card-body">
+            <span class="badge">ChatGPT</span>
+            <h3 class="card-title">Nusantara Story Generator</h3>
+            <p class="card-desc" data-i18n="proj2_desc">An interactive tool that writes Malay folk tales from a few simple prompts.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="midjourney" style="--c1:#f43f5e; --c2:#f59e0b;">
+          <div class="thumb"><span class="thumb-icon">🎨</span></div>
+          <div class="card-body">
+            <span class="badge">Midjourney</span>
+            <h3 class="card-title">Batik Pattern Studio</h3>
+            <p class="card-desc" data-i18n="proj3_desc">A gallery of modern batik designs generated and refined with AI imagery.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="gemini" style="--c1:#0ea5e9; --c2:#8b5cf6;">
+          <div class="thumb"><span class="thumb-icon">🍳</span></div>
+          <div class="card-body">
+            <span class="badge">Gemini</span>
+            <h3 class="card-title">AyamChef Recipe Bot</h3>
+            <p class="card-desc" data-i18n="proj4_desc">Suggests local recipes from whatever ingredients you have in the fridge.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="suno" style="--c1:#ec4899; --c2:#8b5cf6;">
+          <div class="thumb"><span class="thumb-icon">🎵</span></div>
+          <div class="card-body">
+            <span class="badge">Suno</span>
+            <h3 class="card-title">Merdeka Anthem Remix</h3>
+            <p class="card-desc" data-i18n="proj5_desc">A collection of patriotic tunes reimagined in different musical styles.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+        <!-- Card -->
+        <a class="card" data-reveal href="#" data-platform="claude" style="--c1:#14b8a6; --c2:#6366f1;">
+          <div class="thumb"><span class="thumb-icon">🚦</span></div>
+          <div class="card-body">
+            <span class="badge">Claude</span>
+            <h3 class="card-title">TrafficFlow KL</h3>
+            <p class="card-desc" data-i18n="proj6_desc">A prototype that predicts congestion hotspots around Kuala Lumpur.</p>
+            <span class="card-link" data-i18n="card_link">View project →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="empty-state" id="empty-state" hidden data-i18n="empty_state">No projects for this platform yet — check back soon!</p>
+    </div>
+  </main>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about-section">
+    <div class="container about-inner">
+      <div class="about-text" data-reveal>
+        <h2>
+          <span data-i18n="about_h_pre">What is </span><span class="gradient-text">rampai.my</span><span data-i18n="about_h_post">?</span>
+        </h2>
+        <p data-i18n="about_p1">
+          <em>Rampai</em> means a medley — a rich mix of many things brought together.
+          rampai.my is exactly that: a curated collection of projects that Malaysians
+          have built using AI. From dashboards to art to music, it's proof of what
+          anyone can create when great ideas meet powerful tools.
+        </p>
+        <p data-i18n="about_p2">Built something with AI? We'd love to feature it.</p>
+        <a href="#submit" class="btn btn-primary" data-i18n="about_cta">Submit your project</a>
+      </div>
+      <div class="about-card" id="submit" data-reveal>
+        <h3 data-i18n="submit_h">Get featured</h3>
+        <p data-i18n="submit_p">Send us your project and we'll add it to the gallery.</p>
+        <ul class="checklist">
+          <li data-i18n="submit_item1">A thumbnail image</li>
+          <li data-i18n="submit_item2">Title &amp; short description</li>
+          <li data-i18n="submit_item3">Which AI platform you used</li>
+          <li data-i18n="submit_item4">A link to view the project</li>
+        </ul>
+        <a href="mailto:salam@rampai.my" class="btn btn-outline btn-block">salam@rampai.my</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-inner">
+      <div class="contact-intro" data-reveal>
+        <h2 data-i18n="contact_title">Get in touch</h2>
+        <p data-i18n="contact_sub">Have a question, an idea, or want your project featured? Send a message and we'll get back to you.</p>
+        <a class="contact-email" href="mailto:salam@rampai.my">
+          <span class="contact-email-icon">✉</span> salam@rampai.my
+        </a>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate data-reveal>
+        <div class="field">
+          <label for="cf-name" data-i18n="form_name">Name</label>
+          <input id="cf-name" name="name" type="text" required
+                 data-i18n-placeholder="form_name_ph" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="cf-email" data-i18n="form_email">Email</label>
+          <input id="cf-email" name="email" type="email" required
+                 data-i18n-placeholder="form_email_ph" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="cf-message" data-i18n="form_message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required
+                    data-i18n-placeholder="form_message_ph" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_send">Send message</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">ramp<span class="brand-ai">ai</span><span class="brand-dot">.</span>my</span>
+        <p data-i18n="footer_tag">Projects built with AI. Made in Malaysia.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#gallery" data-i18n="nav_projects">Projects</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#submit" data-i18n="footer_submit">Submit</a>
+        <a href="#contact" data-i18n="footer_contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 rampai.my</span>
+      <span data-i18n="footer_made">Made with ✨ and AI</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
