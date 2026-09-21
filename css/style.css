@@ -347,7 +347,7 @@ a { color: inherit; text-decoration: none; }
 }
 .thumb {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, var(--c1, var(--brand-2)), var(--c2, var(--brand)));
@@ -359,6 +359,7 @@ a { color: inherit; text-decoration: none; }
   background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.3), transparent 55%);
 }
 .thumb-icon { font-size: 3rem; position: relative; z-index: 1; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.22)); }
+.thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 .card-body { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .badge {
   align-self: flex-start;

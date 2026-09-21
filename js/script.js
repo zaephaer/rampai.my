@@ -26,12 +26,9 @@ const I18N = {
     gallery_sub: 'Browse projects by the AI platform used to create them.',
     filter_all: 'All',
 
-    proj1_desc: 'A sales dashboard for neighbourhood shops, with forecasting and stock alerts.',
-    proj2_desc: 'An interactive tool that writes Malay folk tales from a few simple prompts.',
-    proj3_desc: 'A gallery of modern batik designs generated and refined with AI imagery.',
-    proj4_desc: 'Suggests local recipes from whatever ingredients you have in the fridge.',
-    proj5_desc: 'A collection of patriotic tunes reimagined in different musical styles.',
-    proj6_desc: 'A prototype that predicts congestion hotspots around Kuala Lumpur.',
+    proj1_desc: 'A cozy JB kopitiam-meets-café landing page — menu, story, and location for regulars and remote workers alike.',
+    proj2_desc: 'A Shariah-compliant qurban booking platform with RFID cattle tagging, flexible instalments, and e-certificate verification.',
+    proj3_desc: 'An interactive multiplication-table game that helps kids practice their times tables by difficulty level.',
     card_link: 'View project →',
     empty_state: 'No projects for this platform yet — check back soon!',
 
@@ -87,12 +84,9 @@ const I18N = {
     gallery_sub: 'Tapis projek ikut platform AI yang digunakan.',
     filter_all: 'Semua',
 
-    proj1_desc: 'Dashboard jualan untuk kedai runcit, lengkap dengan ramalan jualan dan amaran stok.',
-    proj2_desc: 'Alat interaktif yang menghasilkan cerita rakyat Melayu daripada beberapa prompt ringkas.',
-    proj3_desc: 'Koleksi corak batik moden yang dijana dan dikemas menggunakan imej AI.',
-    proj4_desc: 'Cadangkan resipi tempatan ikut bahan yang ada dalam peti sejuk anda.',
-    proj5_desc: 'Koleksi lagu patriotik yang diolah semula dalam pelbagai gaya muzik.',
-    proj6_desc: 'Prototaip yang meramal kawasan sesak trafik sekitar Kuala Lumpur.',
+    proj1_desc: 'Laman utama kopitiam JB — menu, kisah kedai, dan lokasi untuk pelanggan tetap dan pekerja jarak jauh.',
+    proj2_desc: 'Platform tempahan korban patuh Syariah dengan tag RFID lembu, pelan ansuran fleksibel, dan pengesahan e-Sijil.',
+    proj3_desc: 'Permainan sifir interaktif yang membantu kanak-kanak berlatih jadual sifir mengikut tahap kesukaran.',
     card_link: 'Lihat projek →',
     empty_state: 'Belum ada projek untuk platform ini — datang lagi nanti!',
 
