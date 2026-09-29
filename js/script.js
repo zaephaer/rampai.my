@@ -30,6 +30,7 @@ const I18N = {
     proj2_desc: 'A Shariah-compliant qurban booking platform with RFID cattle tagging, flexible instalments, and e-certificate verification.',
     proj3_desc: 'An interactive multiplication-table game that helps kids practice their times tables by difficulty level.',
     proj4_desc: 'Turn a one-line startup pitch into a pre-launch report: market score, competitors, monetization ideas, and MVP scope.',
+    proj5_desc: 'A calm personal finance tracker for income, expenses, monthly budgets, and savings goals — all in one clean dashboard.',
     card_link: 'View project →',
     empty_state: 'No projects for this platform yet — check back soon!',
 
@@ -89,6 +90,7 @@ const I18N = {
     proj2_desc: 'Platform tempahan korban patuh Syariah dengan tag RFID lembu, pelan ansuran fleksibel, dan pengesahan e-Sijil.',
     proj3_desc: 'Permainan sifir interaktif yang membantu kanak-kanak berlatih jadual sifir mengikut tahap kesukaran.',
     proj4_desc: 'Ubah idea startup sebaris ayat kepada laporan pra-lancar: skor pasaran, pesaing, idea monetisasi, dan skop MVP.',
+    proj5_desc: 'Penjejak kewangan peribadi yang tenang untuk pendapatan, perbelanjaan, bajet bulanan, dan matlamat simpanan — semuanya dalam satu papan pemuka yang kemas.',
     card_link: 'Lihat projek →',
     empty_state: 'Belum ada projek untuk platform ini — datang lagi nanti!',
 
